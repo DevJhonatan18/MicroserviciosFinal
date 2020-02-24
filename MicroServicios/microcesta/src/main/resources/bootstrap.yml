@@ -1,0 +1,6 @@
+spring:
+  application:
+    name: servicio.alumno
+  #cloud:
+    #config:
+      #uri: http://localhost:4444

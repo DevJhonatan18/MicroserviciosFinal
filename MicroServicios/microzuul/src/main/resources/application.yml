@@ -1,0 +1,31 @@
+zuul:
+  routes:
+    catalogo:
+      path: /curso/**
+      service-id: servicio.curso
+    compra:
+      path: /alumno/**
+      service-id: servicio.alumno
+eureka:
+  client:
+    register-with-eureka: false
+    service-url:
+      default-zone: http://localhost:8761/eureka/
+server:
+  port: 6565
+ 
+#Basic configuration SLF4j for development
+#logging:
+  #level:
+   # org.springframework: ERROR
+  #  com.mkyong: DEBUG
+ # pattern:
+  #  console: "%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"
+  #  file: "%d %p %c{1.} [%t] %m%n"
+ # file: app.log
+  
+#Configuration SLF4j for production (logback-spring.xml)
+spring:
+  profiles:
+    active:
+    - prod
